@@ -9,7 +9,7 @@ const useMultiStep = ({ initialState, initialStep, numberOfSteps, onComplete }) 
 			...state,
 			...newState
 		};
-
+		// Logic on steps
 		if (step + 1 === numberOfSteps) {
 			onComplete(updateState);
 		} else {

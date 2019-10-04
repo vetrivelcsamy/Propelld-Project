@@ -1,5 +1,4 @@
 import React from "react";
-// import axios from "axios";
 
 class UploadKyc extends React.Component {
 	constructor(props) {

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import useMultiStep from "./Steps";
-// const axios = require("axios");
-
-// Make a request for a user with a given ID
 
 const First = ({ advanceStep, step }) => {
+	// stepone config
 	const [pancard, setpancard] = useState("");
 	const [name, setName] = useState("");
 	const [prof, setProf] = useState("");
@@ -131,6 +129,7 @@ const First = ({ advanceStep, step }) => {
 };
 
 const Second = ({ advanceStep, step }) => {
+	//step two config
 	const [pancard, setpancard] = useState("");
 	const [nameing, setnameing] = useState("");
 	const [ageing, setageing] = useState(0);
@@ -144,9 +143,8 @@ const Second = ({ advanceStep, step }) => {
 		<div>
 			<div className='form-group'>
 				<h4>Step {step + 1}</h4>
-				{/* <input autoFocus type='number' value={age} onChange={handleChange} /> */}
 				<div className='alert alert-secondary alert-dismissible fade show' role='alert'>
-					we will be needing a <strong>Co-Applicant</strong> for Yur Loan application in the next
+					we will be needing a <strong>Co-Applicant</strong> for Your Loan application in the next
 					step
 					<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
 						<span aria-hidden='true'>&times;</span>
@@ -197,6 +195,7 @@ const Second = ({ advanceStep, step }) => {
 };
 
 const Third = ({ advanceStep, step }) => {
+	//step three config
 	const [showPanCard, setshowPanCard] = useState("");
 	const [name, setName] = useState("");
 	const [prof, setProf] = useState("");
@@ -321,6 +320,7 @@ const Done = ({ formData }) => (
 const steps = [First, Second, Third];
 
 function Form() {
+	// initial form config
 	const [completed, setComplete] = useState(false);
 	const [formData, setFormData] = useState({ Data: "UserInfomation" });
 	const handleComplete = data => {
